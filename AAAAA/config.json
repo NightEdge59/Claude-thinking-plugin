@@ -1,0 +1,99 @@
+{
+  "plugin_info": {
+    "name": "Claude-Enhanced OpenWebUI Plugin",
+    "version": "1.0.0",
+    "description": "Lokal LLM'lere Claude 4 seviyesinde düşünme ve agentic yetenekler kazandıran gelişmiş eklenti",
+    "author": "AI Assistant",
+    "license": "MIT",
+    "compatible_versions": [">=0.1.0"]
+  },
+  "settings": {
+    "reasoning": {
+      "default_depth": 3,
+      "max_depth": 5,
+      "enable_critical_thinking": true,
+      "confidence_threshold": 0.6,
+      "max_thinking_steps": 10
+    },
+    "tools": {
+      "enable_auto_discovery": true,
+      "max_tools_per_task": 5,
+      "tool_timeout_seconds": 30,
+      "enable_tool_learning": true,
+      "effectiveness_learning_rate": 0.1
+    },
+    "agentic": {
+      "enable_long_term_planning": true,
+      "max_goal_depth": 3,
+      "planning_horizon_days": 30,
+      "enable_risk_assessment": true,
+      "adaptation_sensitivity": 0.7
+    },
+    "memory": {
+      "max_thinking_history": 1000,
+      "max_learned_patterns": 500,
+      "pattern_decay_days": 30,
+      "enable_context_persistence": true
+    },
+    "performance": {
+      "async_execution": true,
+      "parallel_tool_calls": true,
+      "cache_thinking_results": true,
+      "max_concurrent_tasks": 3
+    }
+  },
+  "features": {
+    "claude_enhanced_thinking": {
+      "enabled": true,
+      "description": "Claude 4 tarzı gelişmiş düşünme ve analiz",
+      "parameters": {
+        "query": "str",
+        "reasoning_depth": "int",
+        "enable_critical_thinking": "bool"
+      }
+    },
+    "discover_and_use_tools": {
+      "enabled": true,
+      "description": "Dinamik araç keşif ve kullanım sistemi",
+      "parameters": {
+        "task_description": "str",
+        "available_apis": "list"
+      }
+    },
+    "agentic_planning": {
+      "enabled": true,
+      "description": "Agentic planlama ve hedef yönetimi",
+      "parameters": {
+        "objective": "str",
+        "constraints": "list",
+        "time_horizon": "str"
+      }
+    },
+    "real_world_adaptation": {
+      "enabled": true,
+      "description": "Gerçek hayat adaptasyonu ve context-aware davranış",
+      "parameters": {
+        "context": "str",
+        "environmental_factors": "list",
+        "adaptation_goals": "list"
+      }
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "claude_enhanced.log",
+    "max_size_mb": 100,
+    "backup_count": 5
+  },
+  "security": {
+    "enable_input_validation": true,
+    "max_input_length": 10000,
+    "sanitize_outputs": true,
+    "rate_limiting": {
+      "enabled": true,
+      "max_requests_per_minute": 60,
+      "max_requests_per_hour": 1000
+    }
+  }
+}
